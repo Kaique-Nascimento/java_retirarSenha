@@ -39,7 +39,7 @@ private void verBanco() {
 			cont = rs.getInt("min_numero");
 			lblsenha.setVisible(true);
 			if(cont == 0) {
-				lblsenha.setText("Sem senhas para serem chamadas");
+				lblsenha.setText("Sem senhas");
 			} else {
 				lblsenha.setText(String.valueOf(cont));
 			}
@@ -73,8 +73,12 @@ private void atualizaSenha() {
         btnchamada = new javax.swing.JButton();
         lblsenha = new javax.swing.JLabel();
         btnvoltar = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(580, 300));
+        setMinimumSize(new java.awt.Dimension(580, 300));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
@@ -90,9 +94,10 @@ private void atualizaSenha() {
         });
         getContentPane().add(btnchamada, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
 
+        lblsenha.setFont(new java.awt.Font("Trebuchet MS", 1, 36)); // NOI18N
         lblsenha.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblsenha.setText("Senha");
-        getContentPane().add(lblsenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, 410, -1));
+        getContentPane().add(lblsenha, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 490, 150));
 
         btnvoltar.setText("Voltar");
         btnvoltar.addActionListener(new java.awt.event.ActionListener() {
@@ -100,7 +105,9 @@ private void atualizaSenha() {
                 btnvoltarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnvoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, -1, -1));
+        getContentPane().add(btnvoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 260, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 290, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -158,6 +165,8 @@ private void atualizaSenha() {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnchamada;
     private javax.swing.JButton btnvoltar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel lblsenha;
     // End of variables declaration//GEN-END:variables
 }
